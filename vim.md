@@ -11,31 +11,31 @@ diw / diW | delete word
 ciw / ciW | change word
 daw / daW | delete word & leading space
 caw / caW | change word & leading space
-dis
-das / dap
-dit
+dis |
+das / dap |
+dit |
 Dib | ()
 DiB | {}
-de, ce
-db
+de, ce |
+db |
 cj | change current and next line
 C+,d+,y+ | current and next line
 2c) | 2nd sen
 c} | prev parag
 ct,dt,yt /x | c,d,y up to x
 cf,df,yf /x | c,d,y up to and including x
-c13G
->ap → indent a paragraph
+c13G |
+\>ap | indent a paragraph
 
 ## Insert Mode
 
 Keys | Description
 :--|:--
-<c-w> | delete word back
-<c-u> | delete to start of line
-<c-o> | normal for one move
-<c-r>0 | paste
-<c-r> =6*35<cr> | do math
+\<c-w> | delete word back
+\<c-u> | delete to start of line
+\<c-o> | normal for one move
+\<c-r>0 | paste
+\<c-r> =6\*35<cr> | do math
 
 ## Movement
 
@@ -53,13 +53,13 @@ nH,nL | move to n lines from top/bottom
 {} | beg. of paragraph
 fx/Fx | find x/find x backwards,
 tx/Tx | find letter before/after x
-'’ or `` | last position
-`. | goto last edit
+'’ or \`\` | last position
+\`. | goto last edit
 % | goto marking ([{
-*/# | highlight word, find next/prev
+\*/# | highlight word, find next/prev
 4$ | EOL 4th line down
 :norm 5j; @: | repeat movement
-15| | goto column 15
+15\| | goto column 15
 [[/[{ | jump to function/block start
 
 ## Marks & Buffers
@@ -69,7 +69,7 @@ Keys | Description
 :marks | show all marks
 mx | marks position x
 'x | goto 1st char of line
-`x | goto char by x
+\`x | goto char by x
 :delmarks a / a-d | del a / a-d
 
 ## Working with files
@@ -95,10 +95,10 @@ Keys | Description
 
 Keys | Description
 :--|:--
-v,V,<c-v>,gv | enter visual mode
+v,V,\<c-v>,gv | enter visual mode
 O | goto other end of selection
 vit | visual in tag
-<c-v>3ji#<esc> | # 3 lines down
+\<c-v>3ji#\<esc> | insert # 3 lines down
 :<,'>t0 | copy v select to bof
 gv | reselect last block
 :’<,’>normal A; | add ; to end of everyline in visual selection
@@ -120,8 +120,8 @@ za/zR/zM | toggle/collapse/open
 
 ## Ex Commands
 
-```
 Range | Command num | Address
+:--|:--|:--
 1,3 | delete, d | 1 → 1st line
 20,. | yank, y | $ → last line
 5,$ | put, p | 0 → above 1st line
@@ -129,7 +129,7 @@ Range | Command num | Address
 :$ |  move, m | 'm → mark m
 ., | join, j | '< → beg. vis
 .,’x | norm | '> → end vis
-    | substitute | % → whole file
+all | substitute | % → whole file
 
 Keys | Description
 :--|:--
@@ -143,7 +143,7 @@ Keys | Description
 d/while | delete up to while
 :.,/while/d | delete from current line to while
 :.,+5s/old/new/gc | sub w/ confirm
-:%s/ *//g | delete all whitespace
+:%s/ \*//g | delete all whitespace
 :-,+s/^/#/g | comment 3 lines
 :%s/$/;/g | add ; to end of lines
 %normali// | comment out whole file
@@ -154,7 +154,7 @@ d/while | delete up to while
 Keys | Description
 :--|:--
 U | undoes all edits on current line
-50i*<esc> | print 50 *
+50i\*<esc> | print 50 *
 2r& | replaces 2 chars w &&
 vim scp://host:/home/1.txt
 :ab | abbreviation
@@ -163,7 +163,7 @@ vim scp://host:/home/1.txt
 :map e ea | normal mode
 noremap gV `[v`] | stay in visual mode after indenting
 g~/gu/gU | swap/lower/upper case
-10<C-a>,180<c-x> | auto increment; will also goto number on line
+10\<C-a>,180\<c-x> | auto increment; will also goto number on line
 :%normal i# | comment all
 c-] | jump to definition
 c-o | jump back
