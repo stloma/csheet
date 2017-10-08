@@ -49,8 +49,8 @@ zz/zh/zl/zt/zb | scroll center/left/right/top/bottom
 H/M/L | top/middle/low screen
 nH,nL | move to n lines from top/bottom
 ^ | first non-whitespace of line
-() | beg. of sentence
-{} | beg. of paragraph
+() | beg/end of sentence
+{} | beg/end of paragraph
 fx/Fx | find x/find x backwards,
 tx/Tx | find letter before/after x
 '’ or \`\` | last position
@@ -62,7 +62,7 @@ tx/Tx | find letter before/after x
 15\| | goto column 15
 [[/[{ | jump to function/block start
 
-## Marks & Buffers
+## Marks
 
 Keys | Description
 :--|:--
@@ -71,6 +71,15 @@ mx | marks position x
 'x | goto 1st char of line
 \`x | goto char by x
 :delmarks a / a-d | del a / a-d
+
+## Buffers
+
+Keys | Description
+:--|:--
+"a7yy | yank +7 into buffer a
+"ayy/"add | yank/delete into buffer
+"Ay | append to buffer A
+"ap | paste from buffer
 
 ## Working with files
 
@@ -81,15 +90,6 @@ Keys | Description
 :ls, then :b | to select buffer
 :bnext[n] | next buffer
 :bNext[n] | prev buffer
-
-## Buffers
-
-Keys | Description
-:--|:--
-"a7yy | yank +7 into buffer a
-"ayy/"add | yank/delete into buffer
-"Ay | append to buffer A
-"ap | paste from buffer
 
 ## Visual Mode
 
@@ -117,10 +117,11 @@ Keys | Description
 :--|:--
 V{motion}zf / zf3j | create fold
 za/zR/zM | toggle/collapse/open
+foldcolumn=\<num>
 
 ## Ex Commands
 
-Range | Command num | Address
+Range | Command | Address
 :--|:--|:--
 1,3 | delete, d | 1 → 1st line
 20,. | yank, y | $ → last line
@@ -156,7 +157,7 @@ Keys | Description
 U | undoes all edits on current line
 50i\*<esc> | print 50 *
 2r& | replaces 2 chars w &&
-vim scp://host:/home/1.txt
+vim scp://host:/home/1.txt |
 :ab | abbreviation
 :map | current mappings
 :map! | insert mode

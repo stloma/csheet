@@ -9,6 +9,14 @@
 
 > This is my personal cheatsheet of commands I use most often.
 
+## git terms
+
+Keys | Description
+:--|:--
+working directory | holds actual files
+index | staging area, done by git add
+head | points to last commit
+
 ## git commit
 
 Keys | Description
@@ -28,42 +36,26 @@ Keys | Description
 -vv | shows tracking branches
 -a | shows all remote & local
 issue2 df273d | create branch from commit
--d -r origin/dev
+-d -r origin/dev | delete only remote tracking branch
 git fetch --all; git branch --v | shows updated information
 -b remotebranch origin/remotebranch
 
-## git reset 
+## git reset
 
 > resets index to last commit
 
 Keys | Description
 :--|:--
-unstages
-HEAD <file> | unstage, less danger -> stash & branch
-checkout -- <file> | Less danger -> stash & branch
+unstages |
+HEAD \<file> | unstage, less danger -> stash & branch
+checkout -- \<file> | Less danger -> stash & branch
 --hard HEAD^ | reset all tracked files to match most recent commit
 alias unstage | reset HEAD --
-git reset <file>
---soft HEAD^
-git reset HEAD~2
+git reset \<file> |
+--soft HEAD^ |
+git reset HEAD~2 |
+git reset 'HEAD@{1}' | undo reset
 
-## git terms
-
-Keys | Description
-:--|:--
-working directory | holds actual files
-index | staging area, done by git add
-head | points to last commit
-
-## undo some changes from prev commit
-
-Keys | Description
-:--|:--
-git revert -n <commit> | stops short of commiting reversion
-git reset |
-git add -p |
-git commit |
-git checkout . |
 
 ## git status
 
@@ -75,7 +67,7 @@ Keys | Description
 
 Keys | Description
 :--|:--
--- <file> | blows away all changes
+-- \<file> | blows away all changes
 -b newbranch 7g5b3r |
 
 ## git revert (undo commited changes)
@@ -92,21 +84,21 @@ git reset --hard HEAD^ | to reverse revert
 Keys | Description
 :--|:--
 git merge master feature |
-no-ff <branch> | force a merge commit when git would normally do a ff merge
+no-ff \<branch> | force a merge commit when git would normally do a ff merge
 
 ## git stash
 
 Keys | Description
 :--|:--
-apply
-list
-drop
-pop
-clear
-list --stat
-show stash@{0}
---include-untracked
-show stash@{2} --patch
+apply |
+list |
+drop |
+pop |
+clear |
+list --stat |
+show stash@{0} |
+--include-untracked |
+show stash@{2} --patch |
 --keep-index | only unstaged
 
 ## git remote
@@ -114,7 +106,7 @@ show stash@{2} --patch
 Keys | Description
 :--|:--
 show origin | shows remote branches
-remote -v
+remote -v |
 prune origin | clean up deleted remote branches
 git push origin :todelete | delete remote branch
 
@@ -123,10 +115,10 @@ git push origin :todelete | delete remote branch
 
 Keys | Description
 :--|:--
-pretty
---oneline -p
---graph
--g --oneline
+pretty |
+--oneline -p |
+--graph |
+-g --oneline |
 --shortstat | changed/inserted/del
 --stat | abbreviated stats
 -p | show patch introduced
@@ -138,9 +130,9 @@ pretty
 
 Keys | Description
 :--|:--
-git diff HEAD
-HEAD~5
-4f3b…3xc9
+git diff HEAD |
+HEAD~5 |
+4f3b…3xc9 |
 git diff | changed, not staged
 --cached/--staged | shows diff between index and last commit
 --staged | staged, will commit
@@ -152,25 +144,59 @@ git diff | changed, not staged
 
 Keys | Description
 :--|:--
-git rebase master
-git rebase -i master pic/squash/edit/fixup
---continue/abort
+git rebase master |
+git rebase -i master pic/squash/edit/fixup |
+--continue/abort |
 
 ## git misc
 
 Keys | Description
 :--|:--
-add -p (patch)
+add -p (patch) |
 clean -f | removes/deletes all untracked
-squash
-reflog
-filter-branch
-clean
-apply
-cherry-pick
+squash |
+reflog |
+filter-branch |
+clean |
+apply |
+cherry-pick |
 show-ref | shows where head is
-update-ref
-ls-files
-tag
-bisect
-blame
+update-ref |
+ls-files |
+tag |
+bisect |
+blame |
+
+## undo some changes from prev commit
+
+Keys | Description
+:--|:--
+git revert -n <commit> | stops short of commiting reversion
+git reset |
+git add -p |
+git commit |
+git checkout . |
+
+
+## Workflows
+
+> Example workflows
+
+|Centralized|
+:--|
+|1. git init --bare
+|2. git clone
+|3. git push/pull
+|4. if conflict -> git pull --rebase origin master
+
+
+|Feature Branch|
+:--|
+|1. checkout -b branch
+|2. changes/commit
+|3. git push
+|4. file pull request
+|5. git checkout master
+|6. git pull
+|7. git pull origin branch
+|8. git push
