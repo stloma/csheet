@@ -90,6 +90,7 @@ no-ff \<branch> | force a merge commit when git would normally do a ff merge
 
 Keys | Description
 :--|:--
+save |
 apply |
 list |
 drop |
