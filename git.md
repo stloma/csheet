@@ -94,7 +94,7 @@ apply |
 list |
 drop |
 pop |
-clear |
+clear | delete all stashes
 list --stat |
 show stash@{0} |
 --include-untracked |
