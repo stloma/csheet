@@ -146,6 +146,7 @@ git diff | changed, not staged
 Keys | Description
 :--|:--
 git rebase master |
+git rebase -i --root master | rebase from initial commit to HEAD
 git rebase -i master pic/squash/edit/fixup |
 --continue/abort |
 
