@@ -46,6 +46,8 @@ zz/zh/zl/zt/zb | scroll center/left/right/top/bottom
 ^f^b |  forward/back one screen
 ^d^u | down/up 1/2 screen
 ^e^y | scroll u/d
+^o^i | back/forward in jumplist
+:jumplist | displays jump numbers. ^o/^i \<jumpnumber\>
 H/M/L | top/middle/low screen
 nH,nL | move to n lines from top/bottom
 ^ | first non-whitespace of line
