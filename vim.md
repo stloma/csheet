@@ -55,7 +55,11 @@ nH,nL | move to n lines from top/bottom
 {} | beg/end of paragraph
 fx/Fx | find x/find x backwards,
 tx/Tx | find letter before/after x
-'’ or \`\` | last position
+\`. | jump to postion where last change occurred in current buffer
+\`0 | jump to position in last file edited (when exited Vim)
+'’ | jump back (to line in current buffer where jumped from)
+\`\` | jump back (to position in current buffer where jumped from)
+or \`\` | last position
 \`. | goto last edit
 % | goto marking ([{
 \*/# | highlight word, find next/prev
