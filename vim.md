@@ -31,6 +31,7 @@ c13G |
 
 Keys | Description
 :--|:--
+\<c-c> | enter normal mode
 \<c-w> | delete word back
 \<c-u> | delete to start of line
 \<c-o> | normal for one move
