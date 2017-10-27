@@ -1,6 +1,16 @@
 # Vim cheatsheet
 
-> This is my personal cheatsheet of commands I use most often.
+- [Selection examples](#selection-examples)
+- [Insert mode](#insert-mode)
+- [Movement](#movement)
+- [Marks](#marks)
+- [Buffers](#buffers)
+- [Working with files](#working-with-files)
+- [Visual Mode](#visual-mode)
+- [Set options](#set-options)
+- [Folding](#folding)
+- [Ex Commands](#ex-commands)
+- [Misc](#misc)
 
 ## Selection examples
 

@@ -1,7 +1,14 @@
 
-# Systems cheatsheet
-
-> This is my personal cheatsheet of commands I use most often.
+- [text processing](#text-processing)
+- [network](#network)
+- [shell](#shell)
+- [file system](#file-system)
+- [services](#services)
+- [packages](#packages)
+- [sed](#sed)
+- [awk](#awk)
+- [filesystem](#filesystem)
+- [server checklist](#server-checklist)
 
 ## text processing
 
@@ -36,7 +43,7 @@
 |netstat -tulpn -> Linux
 |netstat -naf inet -> BSD
 
-## shell/zsh
+## shell
 
 |Commands|Description
 :--|:--|
@@ -85,7 +92,7 @@ chmod u+x, g+x, u-x, g-x
 service sshd status/restart
 service -e (list started services)
 
-## packages / updated
+## packages
 
 |Debian|
 :--|

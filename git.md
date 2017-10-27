@@ -5,9 +5,22 @@
 </p>
 <hr>
 
-# Git cheatsheet
-
-> This is my personal cheatsheet of commands I use most often.
+- [git terms](#git-terms)
+- [git commit](#git-commit)
+- [git branch](#git-branch)
+- [git reset](#git-reset)
+- [git status](#git-status)
+- [git checkout](#git-checkout)
+- [git revert](#git-revert)
+- [git merge](#git-merge)
+- [git stash](#git-stash)
+- [git remote](#git-remote)
+- [git log](#git-log)
+- [git diff](#git-diff)
+- [git rebase](#git-rebase)
+- [git misc](#git-misc)
+- [undo some changes from prev commit](#undo-some-changes-from-prev-commit)
+- [Workflows](#workflows)
 
 ## git terms
 
@@ -70,7 +83,7 @@ Keys | Description
 -- \<file> | blows away all changes
 -b newbranch 7g5b3r |
 
-## git revert (undo commited changes)
+## git revert
 > leaves reverted commit, adds new commit to tip, so it's reversable
 
 Keys | Description
