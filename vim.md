@@ -16,18 +16,16 @@
 
 Keys | Description
 :--|:--
-dl | delete letter
-diw / diW | delete word
-ciw / ciW | change word
-daw / daW | delete word & leading space
-caw / caW | change word & leading space
-dis |
-das / dap |
-dit |
-Dib | ()
+aw | word, including surrounding whitespace
+iw | word, not including whitespace
+cw vs caw | changes cursor to end, aw cursor can be anywhere
+as / is | sentence
+ap / ip | paragraph
+dit | delete inner tag block
+Dab | ()
 DiB | {}
 de, ce |
-db |
+db | delete back
 cj | change current and next line
 C+,d+,y+ | current and next line
 2c) | 2nd sen
