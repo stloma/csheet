@@ -171,7 +171,7 @@ add -p (patch) |
 clean -f | removes/deletes all untracked
 squash |
 reflog |
-filter-branch |
+filter-branch --tree-filter 'rm -f passwords.txt' HEAD | removes all instances of password.txt
 clean |
 apply |
 cherry-pick |
