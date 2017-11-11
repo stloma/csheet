@@ -27,7 +27,7 @@
 Keys | Description
 :--|:--
 working directory | holds actual files
-index | staging area, done by git add
+index | staging area, performed by git add
 head | points to last commit
 
 ## git commit
