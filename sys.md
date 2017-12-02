@@ -73,6 +73,8 @@ dd if=/dev/sda of=/dev/sdb
 dd if=/dev/sda of=~/disk1.img
 chmod 1:x, 2:w, 4:r; 7:rwx
 chmod u+x, g+x, u-x, g-x
+fdisk -l
+gparted
 
 ## services
 
@@ -138,17 +140,6 @@ awk '{print $2, $1}' file |  print first 2 fields, in opposite order
 awk '{ $2 = ""; print }' | delete second field
 awk '$5 == "foo"' | print lines field #5 equals "foo"
 awk '$7 ~ /^[a-f]/' | match field against a regex
-
-## filesystem
-
-|Commands|
-:--|
-df -h
-du -hd 1
-dd if=/dev/sda of=/dev/sdb
-dd if=/dev/sda of=~/disk1.img
-chmod 1:x, 2:w, 4:r; 7:rwx
-chmod u+x, g+x, u-x, g-x
 
 ## server checklist
 
