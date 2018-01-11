@@ -20,6 +20,7 @@
 - [git rebase](#git-rebase)
 - [git misc](#git-misc)
 - [undo some changes from prev commit](#undo-some-changes-from-prev-commit)
+- [gitignore examples](#gitignore-examples)
 - [Workflows](#workflows)
 
 ## git terms
@@ -192,6 +193,13 @@ git add -p |
 git commit |
 git checkout . |
 
+## gitignore examples
+
+pattern | Description
+:--|:--
+*.o | ignore all files with o extension
+libraries/ | ignore any directories named libraries
+/libraries/ | ignore libraries directory in same directory as .gitignore
 
 ## Workflows
 
