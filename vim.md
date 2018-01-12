@@ -170,6 +170,7 @@ d/while | delete up to while
 Keys | Description
 :--|:--
 U | undoes all edits on current line
+gg=G | auto-format code
 50i\*<esc> | print 50 *
 2r& | replaces 2 chars w &&
 vim scp://host:/home/1.txt |
