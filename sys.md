@@ -96,15 +96,23 @@ service -e (list started services)
 
 ## packages
 
-|Debian|
-:--|
-|dpkg/apt/apt-get/apt-cache
-|apt list --installed
-|apt-get -s install (what would be done)
-|dpkg -l / dpkg -L <pkg>
-|dpkg -S <pkg> what installed file
-|apt-get update
-|apt-get uprade
+|Commands|Description
+:--|:--|
+|apt install/remove <pkg> | Install/remove <pkg>
+|apt list --installed / dpkg -l | List installed packages
+|apt -s install <pkg> | Simulate what would be done 
+|apt update | Refreshes repository index
+|apt list --upgradable | Show upgradable packages
+|apt upgrade | Upgrades all upgradable packages
+|apt full-upgrade | Upgrades packages with auto-handling of dependencies
+|apt search <pkg> / apt-cache search <pkg> | Searches for the program
+|apt show <pkg> | Displays control file
+|apt-cache policy [<pkg>] | Shows all policies or of <pkg>
+|/etc/apt/sources.list | List of available repositories
+|dpkg -L <pkg> | List files installed by <pkg>
+|dpkg -s <pkg> | Displays headers of an installed package
+|dpkg -S <file> | Displays which package(s) contins <file>
+|/var/log/dpkg.log | Log of all dpkg actions
 
 |OpenBSD|
 :--|
