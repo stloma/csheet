@@ -104,15 +104,16 @@ no-ff \<branch> | force a merge commit when git would normally do a ff merge
 
 Keys | Description
 :--|:--
-save |
-apply |
-list |
+save [message] | stash with message
+save -u | stash untracked files
+list | list stashes
+apply [name] | apply stash with [name]
+pop [stash] | deletes stash from stack after applied
+branch <name> [stash] | create a branch with <name> from [stash]
 drop |
-pop |
 clear | delete all stashes
 list --stat |
 show stash@{0} |
---include-untracked |
 show stash@{2} --patch |
 --keep-index | only unstaged
 
