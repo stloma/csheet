@@ -66,10 +66,9 @@ fx/Fx | find x/find x backwards,
 tx/Tx | find letter before/after x
 \`. | jump to postion where last change occurred in current buffer
 \`0 | jump to position in last file edited (when exited Vim)
-'’ | jump back (to line in current buffer where jumped from)
-\`\` | jump back (to position in current buffer where jumped from)
+'’ | return to the line where the cursor was before the latest jump
+\`\` | return to cursor postion before latest jump
 or \`\` | last position
-\`. | goto last edit
 % | goto marking ([{
 \*/# | highlight word, find next/prev
 4$ | EOL 4th line down
