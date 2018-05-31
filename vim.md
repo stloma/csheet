@@ -22,17 +22,17 @@ cw vs caw | changes cursor to end, aw cursor can be anywhere
 as / is | sentence
 ap / ip | paragraph
 dit | delete inner tag block
-Dab | ()
-DiB | {}
-de, ce |
-db | delete back
+dab | ()
+diB | {}
+de, ce | delete/change to end
+db, cb | delete/change back
 cj | change current and next line
-C+,d+,y+ | current and next line
+c+,d+,y+ | current and next line
 2c) | 2nd sen
 c} | prev parag
 ct,dt,yt /x | c,d,y up to x
 cf,df,yf /x | c,d,y up to and including x
-c13G |
+c13G | change to line 13
 \>ap | indent a paragraph
 
 ## Insert Mode
@@ -70,11 +70,11 @@ tx/Tx | find letter before/after x
 \`\` | return to cursor postion before latest jump
 or \`\` | last position
 % | goto marking ([{
-\*/# | highlight word, find next/prev
+\* | highlight word under cursor
 4$ | EOL 4th line down
 :norm 5j; @: | repeat movement
 15\| | goto column 15
-[[/[{ | jump to function/block start
+[[/]] | jump to function/block start
 
 ## Marks
 
@@ -112,7 +112,7 @@ Keys | Description
 v,V,\<c-v>,gv | enter visual mode
 O | goto other end of selection
 vit | visual in tag
-\<c-v>3ji#\<esc> | insert # 3 lines down
+\<c-v>3jI#\<esc> | insert # 3 lines down
 :<,'>t0 | copy v select to bof
 gv | reselect last block
 :’<,’>normal A; | add ; to end of everyline in visual selection
