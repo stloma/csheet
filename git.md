@@ -85,7 +85,7 @@ Keys | Description
 -b newbranch 7g5b3r |
 
 ## git revert
-> leaves reverted commit, adds new commit to tip, so it's reversable
+> reverts specified commit by adding new commit to tip, so it's reversible
 
 Keys | Description
 :--|:--
