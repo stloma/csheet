@@ -60,15 +60,13 @@ git fetch --all; git branch --v | shows updated information
 
 Keys | Description
 :--|:--
-unstages |
+mixed | staged snapshot updated to match commit, working directory not affected (default)
+soft | staged snapshot and working directory are not altered
+hard | stage snapshot and working directory are both updated to match the specified commit
 HEAD \<file> | unstage, less danger -> stash & branch
 checkout -- \<file> | Less danger -> stash & branch
---hard HEAD^ | reset all tracked files to match most recent commit
 alias unstage | reset HEAD --
 git reset \<file> |
---soft HEAD^ |
-git reset HEAD~2 |
-git reset 'HEAD@{1}' | undo reset
 
 
 ## git status
